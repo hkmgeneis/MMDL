@@ -1,0 +1,15 @@
+tiles_dir : '/mnt/xisx/col_tiles_cn/' #Training/Test dir
+tiles_color_normalized_dir : '/mnt/xisx/col_tiles_cn/'
+model_path : '/home/ubuntu/hkm/tmbpredictor-master/results//model.pkl'
+
+test_dir : '/mnt/xisx/col_tiles_cn/'
+#'/home/xisx/data/HE/xiehe/tiles_cn' 
+
+ratio_train : 1  # training set ratio
+ratio_test : 0.2  # test set ratio
+
+num_epochs : 50  # epochs for training
+
+use_lmdb : False
+load_data_type : 2  # 0:dir  1: lmdb  2: file
+k : 5
