@@ -8,7 +8,7 @@ Run requirements.txt script to install all the dependencies.
 ```bash
 # install openslide
 sudo apt-get install openslide-tools
-sudo apt-get install python-openslide
+pip3 install openslide-python
 # git clone software to ${SRC} and then run:
 pip3 install -r ${SRC}/requirements.txt
 ```
