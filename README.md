@@ -1,6 +1,7 @@
 ﻿# Histological images for TMB index prediction
-
-
+environment:
+ubuntu18.04
+python3.6
 
 ---
 ## Install dependencies
