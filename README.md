@@ -50,7 +50,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the following links“https://pan.baidu.com/s/1fpU95a5HBp6LbxEM2LgrVQ”. The extraction code is “tagi”.
+slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the following links “https://pan.baidu.com/s/1fpU95a5HBp6LbxEM2LgrVQ”. The extraction code is “tagi”.
 
 ### Segementation
 ``` shell
