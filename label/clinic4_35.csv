@@ -1,0 +1,5 @@
+TCGA_ID,tumor_stage,"Colon, NOS",Transverse colon,Sigmoid colon,Ascending colon,Cecum,Rectosigmoid junction,Splenic flexure of colon,Hepatic flexure of colon,Descending colon,"Rectum, NOS",Tubular adenocarcinoma,"Papillary adenocarcinoma, NOS",Mucinous adenocarcinoma,"Carcinoma, NOS",Adenosquamous carcinoma,Adenocarcinoma with neuroendocrine differentiation,Adenocarcinoma with mixed subtypes,Adenocarcinoma in tubolovillous adenoma,"Adenocarcinoma, NOS",prior_malignancy,ajcc_pathologic_t,ajcc_pathologic_n,ajcc_pathologic_m,gender,vital_status_x,age_at_index,treatments_pharmaceutical_treatment_or_therapy,treatments_radiation_treatment_or_therapy,disease,radiation_therapy,postoperative_rx_tx,vital_status_y,person_neoplasm_cancer_status,new_tumor_event_after_initial_treatment
+TCGA-A6-3808,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,73,0,0,0,0,0,0,0,0
+TCGA-A6-3809,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,3,0,0,1,0,71,0,0,0,0,0,0,0,0
+TCGA-A6-5661,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,1,0,80,0,0,0,0,0,0,0,0
+TCGA-A6-5667,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,1,0,1,0,40,1,0,0,0,1,0,0,0

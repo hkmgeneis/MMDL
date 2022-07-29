@@ -1,0 +1,17 @@
+sudo apt-get install python3-dev
+sudo apt-get install gcc
+sudo apt install openslide-tools
+sudo apt install python3-openslide
+python -m pip install --upgrade pip
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip install torch==1.7.1
+pip install torchaudio==0.7.2
+pip install torchvision==0.8.2
+pip install openslide-python==1.1.2
+pip install matplotlib
+pip install opencv-python
+pip install pandas
+pip install scikit-learn
+pip install tiatoolbox==0.4.0
+pip install tensorboard
+pip install seaborn
