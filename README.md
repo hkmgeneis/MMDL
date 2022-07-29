@@ -33,10 +33,10 @@ MMDL
 * pip install tiatoolbox==0.4.0
 * pip install tensorboard
 * pip install seaborn
-* [Installation Guide](https://github.com/hkmgeneis/MMDL/IMMDL.txt)
+* [Installation Guide](https://github.com/hkmgeneis/MMDL/tree/master/MMDL.txt)
 
 ### Data Preparation
-We first saved hematoxylin-eosin(H&E) stained histopathological whole-section images(WSI) in svs format. Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
+We first saved hematoxylin-eosin(H&E) stained histopathological whole-section images(WSI) in .svs format. Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
 ```bash
 slide_image_root/
     └──WSICRCTMB/
@@ -50,7 +50,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files.
+slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the following links“https://pan.baidu.com/s/1fpU95a5HBp6LbxEM2LgrVQ”. The extraction code is “tagi”.
 
 ### Segementation
 ``` shell
