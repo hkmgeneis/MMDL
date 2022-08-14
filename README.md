@@ -50,7 +50,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the following links “https://pan.baidu.com/s/1fpU95a5HBp6LbxEM2LgrVQ”. The extraction code is “tagi”.
+slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the following link “https://pan.baidu.com/s/1fpU95a5HBp6LbxEM2LgrVQ”. The extraction code is “tagi”.
 
 ### Segementation
 ``` shell
@@ -148,9 +148,9 @@ Then
 python mainc.py 
 ```
 Be careful to modify the paths in the code.
-
+And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the following link “https://pan.baidu.com/s/1eOH4IyT5tz4RtaPXQ7qo5g” with extraction code “cb7m”.
 
 ## Issues
-- Please report all issues on the public forum.
+- Please report all issues on the public forum. 
 
 
