@@ -39,7 +39,7 @@ MMDL
 We first saved hematoxylin-eosin(H&E) stained histopathological whole-section images(WSI) in .svs format. Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
 ```bash
 slide_image_root/
-    └──WSICRCTMB/
+    └──wsi/
          ├── patient_id1
                 ├── WSI_1.svs
                 ├── WSI1_annotated_information.xml
@@ -50,7 +50,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. WSICRCTMB is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the following link “https://pan.baidu.com/s/1fpU95a5HBp6LbxEM2LgrVQ”. The extraction code is “tagi”.
+slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z).
 
 ### Segementation
 ``` shell
@@ -148,7 +148,7 @@ Then
 python mainc.py 
 ```
 Be careful to modify the paths in the code.
-And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the following link “https://pan.baidu.com/s/1eOH4IyT5tz4RtaPXQ7qo5g” with extraction code “cb7m”.
+And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the file named "video.7z" (https://github.com/hkmgeneis/MMDL/blob/master/video.7z).
 
 ## Issues
 - Please report all issues on the public forum. 
