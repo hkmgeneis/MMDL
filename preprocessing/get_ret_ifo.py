@@ -9,13 +9,13 @@ def get_ret_ifo(xy_list: list, slide, svs_address,
                 image_dir_split, window_size: int, stride: int,
                 points_con_thre: int, area_ratio_thre: float):
     """From the xy_list ,getting the information which can help get a min circumscribed rectangle
-    :param xy_list: 点的坐标列表，坐标以列表的形式表示
-    :param slide:读取的svs文件
-    :param image_dir_split 存储分割后的图片路径
-    :param window_size:窗口大小
-    :param stride:窗口步长
-    :param points_con_thre: 轮廓内点的个数阈值
-    :param area_ratio_thre: 面积阈值
+    :param xy_list: List of coordinates for the point, the coordinates are expressed as a list
+    :param slide:read svs file
+    :param image_dir_split: Store the split image path
+    :param window_size:window size
+    :param stride:window step
+    :param points_con_thre: The threshold of the number of points in the contour
+    :param area_ratio_thre: area threshold
     """
     (filepath, filename) = os.path.split(svs_address)
     image_address = image_dir_split + '/' + filename
