@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 # from sklearn import svm, datasets
-from sklearn.metrics import roc_curve, auc  ###计算roc和auc
+from sklearn.metrics import roc_curve, auc 
 # from sklearn import cross_validation
 import argparse
 import os
