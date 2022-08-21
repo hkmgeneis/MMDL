@@ -3,9 +3,9 @@ import numpy as np
 
 
 def get_area_ratio(img):
-    """去除轮廓内的干扰区域
-    :param img: 滑动窗口
-    :return: 面积比
+    """Remove disturbing areas within contours
+    :param img: sliding window
+    :return: area ratio
     """
     img = np.array(img)
 
@@ -13,7 +13,7 @@ def get_area_ratio(img):
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     thresh, img_binary = cv2.threshold(img_gray, 200, 255, cv2.THRESH_BINARY)
 
-    # 得到轮廓
+    # get the outline
     contous, heriachy = cv2.findContours(img_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     area_list = []
     for contou in contous:
