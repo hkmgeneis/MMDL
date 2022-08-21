@@ -96,34 +96,34 @@ def useCrossValidation(X, y, divisionMethod):
 
 
 def main(srcImg, label, divisionMethod, isCrossValidation=True, shuffle=True):
-    assert os.path.exists(label), "Error: 标签文件不存在"  
-    assert Path(label).suffix == '.csv', "Error: 标签文件需要是csv文件"  
+    assert os.path.exists(label), "Error: tag file does not exist"  
+    assert Path(label).suffix == '.csv', "Error: The label file needs to be a csv file"  
 
     try:
         df = pd.read_csv(label, usecols=["TCGA_ID", "TMB20"])  
     except :
-        print("Error: 未在文件中发现TCGA_ID或TMB20列信息")
+        print("Error: TCGA_ID or TMB20 column information not found in file")
     
     img_dir = glob(os.path.join(srcImg, '*'))
     xml_file_seq = [img.split('/')[-2] for img in img_dir]
 
-    msi_label_seq = [getattr(row, 'TCGA_ID') for row in df.itertuples() if getattr(row, 'TMB20') == 1]
-    mss_label_seq = [getattr(row, 'TCGA_ID') for row in df.itertuples() if getattr(row, 'TMB20') == 0]
+    tmbh_label_seq = [getattr(row, 'TCGA_ID') for row in df.itertuples() if getattr(row, 'TMB20') == 1]
+    tmbl_label_seq = [getattr(row, 'TCGA_ID') for row in df.itertuples() if getattr(row, 'TMB20') == 0]
     
-    assert msi_label_seq != 0, "Error: 数据分布异常"
-    assert mss_label_seq != 0, "Error: 数据分布异常"
+    assert tmbh_label_seq != 0, "Error: Abnormal data distribution"
+    assert tmbl_label_seq != 0, "Error: Abnormal data distribution"
 
     X  = []
     y = []
 
-    for msi in msi_label_seq:
-        if os.path.join(srcImg, msi) in img_dir:
-            # print(os.path.join(srcImg, msi))
-            X.append(os.path.join(srcImg, msi))
+    for tmbh in tmbh_label_seq:
+        if os.path.join(srcImg, tmbh) in img_dir:
+            # print(os.path.join(srcImg, tmbh))
+            X.append(os.path.join(srcImg, tmbh))
             y.append(1)
-    for mss in mss_label_seq:
-        if os.path.join(srcImg, mss) in img_dir:
-            X.append(os.path.join(srcImg, mss))
+    for tmbl in tmbl_label_seq:
+        if os.path.join(srcImg, tmbl) in img_dir:
+            X.append(os.path.join(srcImg, tmbl))
             y.append(0)
 
     if isCrossValidation:
