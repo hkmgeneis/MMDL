@@ -50,7 +50,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z).
+slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z). Warm reminder, due to the large data, please download with patience.
 
 ### Segementation
 ``` shell
@@ -148,7 +148,7 @@ Then train and test like above "python main.py".
 python mainc.py 
 ```
 Be careful to modify the paths in the code. 
-And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the file named "video.7z" (https://github.com/hkmgeneis/MMDL/blob/master/video.7z).
+And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the file named "video.7z" (https://github.com/hkmgeneis/MMDL/blob/master/video.7z). Warm reminder, due to the large data, please download with patience.
 
 ## Issues
 - Please report all issues on the public forum. 
