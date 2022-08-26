@@ -75,6 +75,17 @@ The following arguments need to be specified:
 ### label
 Datasets are expected to be prepared in two csv formats. One of the csv file(e.g.colo_tmb_label4.csv) contains at least 3 columns: **TCGA_ID**, **TMB_Value**, **TMB20**. Each **TCGA_ID** is a unique identifier for a patient, which corresponds to a **TMB_Value**. **TMB20** refers to dividing TMB high and low states with a TMB value of 20 as a threshold. Those with a TMB value greater than or equal to 20 are classified as high TMB and marked as 1. Those with a TMB value less than 20 are classified as low TMB and marked as 0. We provide a dummy example of a data csv file in the **label** folder, named **crc_tmb_label4.csv**. Another csv file is the clinical information table corresponding to the patient. Each **TCGA_ID** is a unique identifier for a patient. First, the clinical information of the patients was obtained and matched with the patients in this study. Simultaneous data cleaning, including dropping columns and filling missing values. Delete some clinical feature columns that are not meaningful to this study (such as bar-code, uuid, etc.), blank, not report or not available more than 25%. The clinical information table was then converted into a numerical list using one-hot encoding. For continuous features, fill missing values with the mean. Discontinuous features, filled with mode. We provide a dummy example of a dataset csv file in the **label** folder, named **clinic4_35.csv**. 
 
+### Training Splits
+For evaluating the algorithm's performance, we randomly partitioned our dataset into training and test splits using cross-validation. An example splits for the dummy data can be fould in **data**. These splits can be automatically generated using the train_test_splitter.py script with minimal modification. For example, the dummy splits were created by calling:
+ 
+``` shell
+python train_test_splitter.py 
+```
+The following arguments need to be specified:
+* stained_tiles_home (str): Path to saved .png tiles for color normalization, same as "toutput_dir" in stain_color_norm.py.
+* label_dir_path (str): Path to the label csv file. We provide a dummy example of a data csv file in the **label** folder, named **crc_tmb_label4.csv**. 
+
+### Training
 For H&E training, look under main.py:
 ```python
 def main(ocs, classification, K, cnv):
@@ -90,17 +101,6 @@ In addition to the fold of cross-validation (k), the following arguments need to
 * path (str): Path to save H&E image training models.
 * cnv (bool): "False" indicates that only H&E image features are used to predict tumor TMB, "True" means fusion of H&E images and clinical features to predict tumor TMB.
 
-### Training Splits
-For evaluating the algorithm's performance, we randomly partitioned our dataset into training and test splits using cross-validation. An example splits for the dummy data can be fould in **data**. These splits can be automatically generated using the train_test_splitter.py script with minimal modification. For example, the dummy splits were created by calling:
- 
-``` shell
-python train_test_splitter.py 
-```
-The following arguments need to be specified:
-* stained_tiles_home (str): Path to saved .png tiles for color normalization, same as "toutput_dir" in stain_color_norm.py.
-* label_dir_path (str): Path to the label csv file. We provide a dummy example of a data csv file in the **label** folder, named **crc_tmb_label4.csv**. 
-
-### Training
 ``` shell
 python main.py 
 ```
@@ -143,11 +143,11 @@ For H&E+clinic training, look under Net.py:
 ```
 If your server with gpu, using "self.mcb = CompactBilinearPooling(128, 35, 128).cuda()".If your server with cpu, using "self.mcb = CompactBilinearPooling(128, 35, 128)". "35" refers to the number of fused clinical features.
 
-Then
+Then train and test like above "python main.py".
 ``` shell
 python mainc.py 
 ```
-Be careful to modify the paths in the code.
+Be careful to modify the paths in the code. 
 And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the file named "video.7z" (https://github.com/hkmgeneis/MMDL/blob/master/video.7z).
 
 ## Issues
