@@ -13,7 +13,7 @@ MMDL
 ## Pre-requisites:
 * Linux (Tested on Ubuntu 22.04)
 * Anaconda3 
-* Python (3.8.13), Python (3.8.13), torch(1.7.1), torchaudio(0.7.2), torchvision(0.8.2), openslide-python(1.1.2), matplotlib(3.5.2), opencv-python(4.6.0.66), pandas(1.4.3), scikit-learn(0.23.2), tiatoolbox(0.4.0), tensorboard(2.9.1).
+* Python (3.8.13), torch(1.7.1), torchaudio(0.7.2), torchvision(0.8.2), openslide-python(1.1.2), matplotlib(3.5.2), opencv-python(4.6.0.66), pandas(1.4.3), scikit-learn(0.23.2), tiatoolbox(0.4.0), tensorboard(2.9.1).
 
 ### Installation Guide for Linux (using anaconda)
 * sudo apt-get install python3-dev
@@ -36,7 +36,7 @@ MMDL
 * [Installation Guide](https://github.com/hkmgeneis/MMDL/tree/master/MMDL.txt)
 
 ### Data Preparation
-We first saved hematoxylin-eosin(H&E) stained histopathological whole-section images(WSI) in .svs format. Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
+We first saved hematoxylin-eosin(H&E) stained histopathological whole slide images(WSI) in .svs format. The WSI can be downloaded from TCGA (https://portal.gdc.cancer.gov/). Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
 ```bash
 slide_image_root/
     └──wsi/
