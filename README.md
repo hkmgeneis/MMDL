@@ -36,7 +36,7 @@ MMDL
 * [Installation Guide](https://github.com/hkmgeneis/MMDL/tree/master/MMDL.txt)
 
 ### Data Preparation
-We first saved hematoxylin-eosin(H&E) stained histopathological whole slide images(WSI) in .svs format. The WSI can be downloaded from TCGA (https://portal.gdc.cancer.gov/). Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
+We first saved hematoxylin-eosin(H&E) stained histopathological whole slide images(WSI) in .svs format. Professional pathologists used ASAP software to annotate tumor areas and save the annotation information in .xml files. Here, it is ensured that the WSI and annotation information of the same patient were placed in the same folder (named after the patient id(e.g.TCGA-3L-AA1B)).The following folder structure is assumed:
 ```bash
 slide_image_root/
     └──wsi/
@@ -50,7 +50,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z). Warm reminder, due to the large data, please download with patience.
+slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z). Warm reminder, due to the large data, please download with patience. Due to the large size of the data, we only use four patients' data for testing. WSI data for the remaining patients can be downloaded from TCGA (https://portal.gdc.cancer.gov/). 
 
 ### Segementation
 ``` shell
@@ -148,7 +148,7 @@ Then train and test like above "python main.py".
 python mainc.py 
 ```
 Be careful to modify the paths in the code. 
-And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the file named "video.7z" (https://github.com/hkmgeneis/MMDL/blob/master/video.7z). Warm reminder, due to the large data, please download with patience.
+And we provided a detailed video tutorial to describe in detail how to install the tool and run it starting from the bunch of Python files. The video can be obtained from the file named "video.7z" (https://github.com/hkmgeneis/MMDL/blob/master/video.7z). Warm reminder, due to the large data, please download with patience. 
 
 ## Issues
 - Please report all issues on the public forum. 
