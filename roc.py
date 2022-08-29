@@ -1,13 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-# from sklearn import svm, datasets
 from sklearn.metrics import roc_curve, auc 
-# from sklearn import cross_validation
 import argparse
 import os
 
 
-def draw_roc(K, cnv=True):
+def draw_roc(K,cnv):
     fig, ax = plt.subplots()
     tprs = []
     aucs = []
@@ -20,13 +18,13 @@ def draw_roc(K, cnv=True):
         roc_auc = auc(fpr, tpr)
         print(roc_auc)
         interp_tpr = np.interp(mean_fpr, fpr, tpr)
-        interp_tpr[0] = 0.0
+        #interp_tpr[0] = 0.0
         tprs.append(interp_tpr)
         aucs.append(roc_auc)
         ax.plot(fpr, tpr, lw=1, label='ROC fold %d (area = %0.3f)' % (k, roc_auc))
 
     mean_tpr = np.mean(tprs, axis=0)
-    mean_tpr[-1] = 1.0
+    #mean_tpr[-1] = 1.0
     mean_auc = auc(mean_fpr, mean_tpr)  
     std_auc = np.std(aucs)
     ax.plot(mean_fpr, mean_tpr, label='Mean ROC (AUC = {:.3f})'.format(mean_auc, std_auc), lw=2,
@@ -47,7 +45,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='manual to this script',
                                      epilog="authorized by geneis ")
     parser.add_argument('--K', type=int, default=2)
-    parser.add_argument('--cnv', type=bool, default=True)
+    parser.add_argument('--cnv', type=bool, default=False)
     args = parser.parse_args()
     draw_roc(args.K, args.cnv)
 
