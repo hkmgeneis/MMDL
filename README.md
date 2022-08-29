@@ -13,6 +13,7 @@ MMDL
 ## Pre-requisites:
 * Linux (Tested on Ubuntu 22.04)
 * Anaconda3 
+* NVIDIA GPU (Tested on Nvidia GeForce RTX 2080 Ti x 12 on local workstations, and Nvidia P100, K80 GPUs on Google Cloud)
 * Python (3.8.13), torch(1.7.1), torchaudio(0.7.2), torchvision(0.8.2), openslide-python(1.1.2), matplotlib(3.5.2), opencv-python(4.6.0.66), pandas(1.4.3), scikit-learn(0.23.2), tiatoolbox(0.4.0), tensorboard(2.9.1).
 
 ### Installation Guide for Linux (using anaconda)
