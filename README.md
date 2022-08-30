@@ -51,7 +51,7 @@ slide_image_root/
                 └── ...
          └── ...
 ```
-slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z). Warm reminder, due to the large data, please download with patience. Due to the large size of the data, we only use four patients' data for testing. WSI data for the remaining patients can be downloaded from TCGA (https://portal.gdc.cancer.gov/). 
+slide_image_root is the base directory of all datasets. wsi is the name of the folder containing data specific to one experiment from each patient is stored as .svs and .xml files. Dummy data can be obtained from the file named "wsi.7z" (https://github.com/hkmgeneis/MMDL/blob/master/wsi.7z). Warm reminder, due to the large data, please download with patience. Due to the large size of the data, we only use four patients' data for testing. WSI data for the remaining patients can be downloaded from TCGA (https://portal.gdc.cancer.gov/), and the corresponding annotation information is also stored in the "crcxml.7z" folder of the GitHub webpage.
 
 ### Segementation
 ``` shell
